@@ -7,6 +7,7 @@ def PrintMsg(value,color){
 		'blue' : "\033[47;34m>>>>>>>>>${value}<<<<<<<<<<<\033[0m",
 		'green1' : "\033[40;32m>>>>>>>>>${value}<<<<<<<<<<<\033[0m"
 	]
-	ansiColor('xterm')
-	println(colors[color])
+	ansiColor('xterm'){
+	    println(colors[color])
+	}
 }
