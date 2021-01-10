@@ -32,7 +32,7 @@ pipeline {
 							script{
 								tools.PrintMsg("下载源码","blue")
 								tools.PrintMsg("$param","green1")
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '4a1ba6aa-49c9-4c48-9d40-fe9c3de8a9f2', url: 'http://10.24.24.17:8888/root/uyw-agent.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '4a1ba6aa-49c9-4c48-9d40-fe9c3de8a9f2', url: 'http://10.24.24.17/root/uyw-java.git']]])
 							}
 						}
 					}
