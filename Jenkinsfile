@@ -45,7 +45,11 @@ pipeline {
 								tools.PrintMsg("env.CC","green1")
 								mvnHome = tool "mvn"
 								println(mvnHome)
-								sh "${mvnHome}/bin/mvn --version"
+								println(WORKSPACE)
+								sh """
+								${mvnHome}/bin/mvn --version
+								${mvnHome}/bin/mvn clean install
+								"""
 								tools.PrintMsg("this is my libary","red")
 							}
 						}
